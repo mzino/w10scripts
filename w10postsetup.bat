@@ -3,7 +3,6 @@ rem source: https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/
 rem source: https://raw.githubusercontent.com/Sycnex/Windows10Debloater/master/Windows10Debloater.ps1
 rem source: https://github.com/W4RH4WK/Debloat-Windows-10/tree/master/scripts
 rem source: https://freetimetech.com/windows-10-clean-up-debloat-tool-by-ftt/
-rem run this twice: https://raw.githubusercontent.com/W4RH4WK/Debloat-Windows-10/master/scripts/disable-windows-defender.ps1
 
 echo Disabling services
 sc stop diagnosticshub.standardcollector.service
@@ -14,9 +13,13 @@ sc stop MapsBroker
 sc stop OneSyncSvc
 sc stop perceptionsimulation
 sc stop RemoteRegistry
-rem sc stop TrkWks
 sc stop TroubleshootingSvc
 sc stop WbioSrvc
+sc stop wcncsvc
+sc stop WdBoot
+sc stop WdFilter
+sc stop WdNisDrv
+sc stop WdNisSvc
 sc stop WMPNetworkSvc
 sc stop XblAuthManager
 sc stop XblGameSave
@@ -30,9 +33,13 @@ sc config MapsBroker start= disabled
 sc config OneSyncSvc start= disabled
 sc config perceptionsimulation start= disabled
 sc config RemoteRegistry start= disabled
-rem sc config TrkWks start= disabled
 sc config TroubleshootingSvc start= disabled
 sc config WbioSrvc start= disabled
+sc config wcncsvc start= disabled
+sc config WdBoot start= disabled
+sc config WdFilter start= disabled
+sc config WdNisDrv start= disabled
+sc config WdNisSvc start= disabled
 sc config WMPNetworkSvc start= disabled
 sc config XblAuthManager start= disabled
 sc config XblGameSave start= disabled
